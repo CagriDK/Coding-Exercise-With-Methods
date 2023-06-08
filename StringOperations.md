@@ -46,24 +46,24 @@ int main()
 
 ```
 
-//1.cevap s.erase(s.begin());
-//2.cevap s.pop_back();
-//3.cevap s.erase(s.begin()+1,s.end()-1);
-//4.cevap s.erase(s.begin()+1);
-//5.cevap s.erase(s.end()-1);
-//6.cevap s.erase(idx,1);
-//7.cevap s.erase(s.find_first_of("a"),1);
-//8.cevap s.erase(s.find_last_of("a"),1);
-//9.cevap std::remove(s.begin(),s.end(),'a');
-//10.cevap s.erase(s.find_first_of("a")+1,s.find_last_of("a")-s.find_first_of("a")-1);
-//11.cevap s.erase(s.find_first_of("a")-1,1); s.erase(s.find_first_of("a")+1,2);
-//12.cevap s.erase(s.find("kan"),3);
-//13.cevap s.erase(s.rfind("kan"),3);
-//14.cevap while(s.find("kan") != std::string::npos) {s.erase(s.find("kan"),3);}
-//15. cevap s.erase(s.find_first_of("0123456789"),1);
-//16. cevap s.erase(s.find_last_of("0123456789"),1);
-//17. cevap while(s.find_first_of("0123456789") != std::string::npos) {s.erase(s.find_first_of("0123456789"),1);}
-//18. cevap if(s.size() > 1 && (s.at(0) == s.at(s.size()-1))){ s.erase(s.begin()); s.erase(s.end()-1);}
-//19. cevap if(s.length() > 5 && s.substr(0,3) == s.substr(s.length()-3,3)){s.erase(0,3); s.erase(s.size()-3,3);}
-//20. cevap	for(auto iter=s.begin();iter!=s.end();++iter){if(*(iter+1) == *(iter)){s.erase(iter);std::cout<<(*iter)<<"\n";}}
-//21. cevap while(s.find(" ") != std::string::npos){s.erase(s.find(" "),1);}
+1. s.erase(s.begin());
+2. s.pop_back();
+3. s.erase(s.begin()+1,s.end()-1);
+4. s.erase(s.begin()+1);
+5. s.erase(s.end()-1);
+6. s.erase(idx,1);
+7. s.erase(s.find_first_of("a"),1);
+8. s.erase(s.find_last_of("a"),1);
+9. std::remove(s.begin(),s.end(),'a');
+10. s.erase(s.find_first_of("a")+1,s.find_last_of("a")-s.find_first_of("a")-1);
+11. s.erase(s.find_first_of("a")-1,1); s.erase(s.find_first_of("a")+1,2);
+12. s.erase(s.find("kan"),3);
+13. s.erase(s.rfind("kan"),3);
+14. while(s.find("kan") != std::string::npos) {s.erase(s.find("kan"),3);}
+15. s.erase(s.find_first_of("0123456789"),1);
+16. s.erase(s.find_last_of("0123456789"),1);
+17. while(s.find_first_of("0123456789") != std::string::npos) {s.erase(s.find_first_of("0123456789"),1);}
+18. if(s.size() > 1 && (s.at(0) == s.at(s.size()-1))){ s.erase(s.begin()); s.erase(s.end()-1);}
+19. if(s.length() > 5 && s.substr(0,3) == s.substr(s.length()-3,3)){s.erase(0,3); s.erase(s.size()-3,3);}
+20. for(auto iter=s.begin();iter!=s.end();++iter){if(*(iter+1) == *(iter)){s.erase(iter);std::cout<<(*iter)<<"\n";}}
+21. while(s.find(" ") != std::string::npos){s.erase(s.find(" "),1);}
