@@ -1,6 +1,7 @@
 #include <iostream>
 #include <bitset>
 #include <algorithm>
+#include <vector>
 
 unsigned char convertToByte(std::bitset<8> bitSet){
     unsigned char convertedByte{0};
@@ -23,6 +24,24 @@ std::bitset<8> convertToBitset(unsigned char byte){
         convertedBitset[7 - idx] = temp;
     }
     return convertedBitset;
+}
+
+std::vector<char> convertToByteArray(unsigned int value)
+{
+    std::vector<char> byteArray;
+    byteArray.push_back(value & 0xFF);
+    byteArray.push_back((value >> 8) & 0xFF);
+    return byteArray;
+}
+
+unsigned int convertToUInt(std::vector<char> byteArray)
+{
+    unsigned int value = 0;
+    for(auto i = 0; i<byteArray.size(); i++)
+    {
+        value |= byteArray[i] << (i*8);
+    }
+    return value;
 }
 
 int main(int, char**){
