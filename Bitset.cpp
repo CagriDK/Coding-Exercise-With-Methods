@@ -1,5 +1,6 @@
 #include <iostream>
 #include <bitset>
+#include <algorithm>
 
 unsigned char convertToByte(std::bitset<8> bitSet){
     unsigned char convertedByte{0};
@@ -11,6 +12,17 @@ unsigned char convertToByte(std::bitset<8> bitSet){
     }
 
     return convertedByte;
+}
+
+std::bitset<8> convertToBitset(unsigned char byte){
+    std::bitset<8> convertedBitset{byte};
+
+    for(auto idx= 0; idx < 4; idx++){
+        bool temp = convertedBitset[idx];
+        convertedBitset[idx] = convertedBitset[7-idx];
+        convertedBitset[7 - idx] = temp;
+    }
+    return convertedBitset;
 }
 
 int main(int, char**){
@@ -31,4 +43,10 @@ int main(int, char**){
 
     std::cout << std::hex << static_cast<unsigned>(convertedByte) << std::endl;
 
+    std::bitset<8> convertedBitset = convertToBitset(convertedByte);
+    
+
+    for(int i = 0; i < 8; i++){
+        std::cout << convertedBitset[i];
+    }
 }
