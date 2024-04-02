@@ -1,0 +1,3 @@
+C:\Users\cagri\Downloads\cmake-3.24.3-windows-x86_64\bin\cmake.exe -E rm -f CMakeFiles\BitOps.dir/objects.a
+C:\mingw64\bin\ar.exe qc CMakeFiles\BitOps.dir/objects.a @CMakeFiles\BitOps.dir\objects1.rsp
+C:\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\BitOps.dir/objects.a -Wl,--no-whole-archive -o BitOps.exe -Wl,--out-implib,libBitOps.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\BitOps.dir\linklibs.rsp
